@@ -82,3 +82,23 @@ def deletar_sensor(sensor_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#
+# Teste de Validação (Tratamento de Erros):
+# Enviaem um POST via Postman/Insomnia/Bruno contendo apenas
+# {"temperatura": 25.0} (omitindo o ID).
+# O que aconteceu?
+#
+# Implementação do Método PUT:
+#  Criar uma nova rota @app.route('/sensores/clima/<sensor_id>', methods=['PUT']).
+#  A rota deve buscar o sensor pelo ID e atualizar o
+#  valor da temperatura com o novo dado enviado
+#  no corpo (JSON) da requisição.
+#
+# Filtros via Query Parameters: Modificar a rota GET /sensores/clima geral.
+# Use o método request.args.get('acima_de') para capturar um
+#  parâmetro na URL (ex: /sensores/clima?acima_de=30) e fazer a API retornar
+#  apenas as leituras de temperatura maiores que o valor informado.
+#
+
+
