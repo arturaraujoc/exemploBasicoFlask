@@ -1,3 +1,5 @@
+# https://github.com/fvaladares/exemploBasicoFlask
+
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -138,22 +140,7 @@ if __name__ == '__main__':
 
 
 # TODO (1)
-# Teste de Validação (Tratamento de Erros):
-#
-# Enviar um POST via Postman/Insomnia/Bruno contendo apenas:
-#
-# {
-#     "temperatura": 25.0
-# }
-#
-# O que aconteceu?
-#
-# A API deve retornar:
-#
-# {
-#     "erro": "Os campos 'id' e 'temperatura' são obrigatórios."
-# }
-#
-# HTTP Status: 400
-
-### O que foi implementado
+# Quando se envia uma requisição POST contendo apenas {"temperatura": 25.0},
+#  a API identifica que o campo obrigatorio id não foi informado.
+#  Por isso a requisição foi rejeitada e retornou o status HTTP 400,
+#  com a mensagem informando que os campos id e temperatura são obrigatorios.
